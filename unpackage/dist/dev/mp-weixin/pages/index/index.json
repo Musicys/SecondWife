@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "月薪上万",
+  "usingComponents": {
+    "index-swiper": "/components/index/indexSwiper",
+    "wife": "/components/index/Wife"
+  }
+}
