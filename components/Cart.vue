@@ -7,6 +7,8 @@
 			</view>
 			<view class="but">
 				<Cartone></Cartone>
+				<Cartone></Cartone>
+			
 			</view>
 		</view>
 	</view>
@@ -23,7 +25,8 @@
 			border-bottom: 1rpx solid rgba(0, 0, 0, .3);
 		}
 		.but{
-			
+		display: flex;
+		flex-wrap: wrap;
 		}
 		
 	}
