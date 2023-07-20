@@ -10,6 +10,7 @@
 				//导航 但是微信不支持
 				// app h5支持
 				"app-plus":{
+					"scrollIndicator": "none",
 					"titleNView": {
 						"buttons": [
 							{
@@ -70,6 +71,7 @@
 		"spacing":"8px",
 		"color": "#8a8a8a",
 		"selectedColor": "#2c2c2c",
+		
 		"list":[
 			{"pagePath": "pages/index/index",
 				"text": "首页",

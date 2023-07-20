@@ -1,0 +1,1 @@
+<view class="Shop data-v-aaa41fa4"><image src="../../static/bz2.png" mode="widthFix" class="data-v-aaa41fa4"></image><view class="Scroll data-v-aaa41fa4"><scroll-view class="Scrollbox data-v-aaa41fa4" scroll-x="true"><cartone vue-id="a9ded2d0-1" data="{{Catedata}}" whitespace="nowop" class="data-v-aaa41fa4" bind:__l="__l"></cartone></scroll-view></view></view>

@@ -1,36 +1,36 @@
 <template>
 	<view class="wife">
-		<view class="wifekep">
+		<view class="wifekep" v-for="(i,k) in Wifedata" :key="k">
 			<view class="top">
-				<image src="@/static/wife/wifeone.png" mode="widthFix"></image>
+			<image :src="i.bigurl" mode="widthFix" ></image>
 			</view>
-			<view class="but">
-				<image src="@/static/wife/wifefive.jpg" mode="heightFix"></image>
-				<image src="@/static/wife/wifesix.png" mode="heightFix"></image>
-				<image src="@/static/wife/wifenine.png" mode="heightFix"></image>
+			<view class="but"   >
+					<image v-for="(item,f) in i.data" :key="f":src="item.imgurl" mode=""></image>
 			</view>
 		</view>
 		
-		<view class="wifekep">
-			<view class="top">
-				<image src="@/static/wife/wifetwo.png" mode="widthFix"></image>
-			</view>
-			<view class="but">
-				<image src="@/static/wife/wifenight.jpg" mode="heightFix"></image>
-				<image src="@/static/wife/wifeseven.jpg" mode="heightFix"></image>
-				<image src="@/static/wife/wifethree.png" mode="heightFix"></image>
-			</view>
-		</view>
 	</view>
 </template>
 
 <script>
 	export default {
+	props:['data'],
+	data(){
+		return {
+			Wifedata:[],
+			
+		}
+	},
+	beforeMount(){
+	this.Wifedata=this.data
+			// console.log(this.Wifedata);
+	}
 	
 	}
 </script>
 <style lang="scss" scoped>
 	.wife{
+		border-top:1rpx solid black ;
 		width: 100%;
 	
 		background: #85D8FF;

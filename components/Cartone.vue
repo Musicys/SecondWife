@@ -1,69 +1,113 @@
 <template>
-	<view class="Cart">
+	<view class="box" :class="whitespace==1?'ys':''" >
+		
+	
+	<view class="Cart " v-for="i,index in Cartdata" :key="index" :class="width=='2'?'datatwo':'datathree'" >
 		<view class="top">
-			<image :src="Cartdata.url" mode="widthFix"></image>
+			
+			<image :src="i.url" mode="widthFix"></image>
 		</view>
 		<view class="but">
-			<text class="nr">{{Cartdata.shopname}}</text>
+			<text class="nr">{{i.shopname}}</text>
 			<view  class="but_jg">
-			<text v-for="i,index in Cartdata.bq" :key='index'>
-				{{i}}
-			</text>
+			<text v-for="ie,index in i.bq" :key='index'>
+				{{ie}}
+			</text>	
 			</view>
 			<view class="monny">
-				￥<text>{{Cartdata.Money}}</text>
-				<text>折扣{{Cartdata.ck}}</text>
+				￥<text>{{i.Money}}</text>
+				<text>折扣{{i.ck}}</text>
 			</view>
 		</view>
+	</view>
 	</view>
 </template>
 
 <script>
 	export default {
 		name:"Cartone",
+		props:{
+			data:{},
+			width:{
+				default(){
+					return 2
+				}
+			},
+			whitespace:{
+				default(){
+					return 1
+				}
+			}
+		},
 		data() {
 			return {
-				Cartdata:{
-					url:'/static/wife/wifethree.png',
-					shopname:'埃利瑟',
-					bq:['好看','很好看'],
-					Money:'99',
-					ck:'5.7'
-					
-				}
+				Cartdata:[],
+					// 样式
+				
+				
 			};
-		}
+			
+			
+		},
+	
+		beforeMount(){
+			
+			this.Cartdata=this.data
+			
+		},
+		
 	}
 </script>
 
 <style lang="scss" scoped>
+	
+	.ys{
+		flex-wrap: wrap;
+	
+	
+	}
+	.datatwo{
+			width: 50%;
+	}
+	.datathree{
+			width: 33%;
+	}
+	.box{
+		display: flex;
+
+		justify-content: space-between;
+		width: 100%;
+	
 .Cart{
-	
-	
-	flex:40%;
-	padding: 10rpx 5rpx;
-	max-width: 375rpx;
+
 	.top{
 		width: 100%;
 		image{
 			border-radius: 15rpx;
 			
-			width: 100%;
+			width: 95%;
+			display: block;
+			margin: auto;
 		}
 	}
 	.but{
 	
 		.nr{
 			display: inline-block;
+			margin-left: 10rpx;
 			overflow: hidden;
 			width: 300rpx;
 			white-space: nowrap;
 			text-overflow: ellipsis;
+		
 			
 		}
 		.but_jg{
+			
 			text{
-				margin-right: 10rpx;
+				display: inline-block;
+				margin-left: 10rpx;
+				margin-right: 20rpx;
 				color: green;
 				&:nth-child(1){
 					color: red;
@@ -71,6 +115,7 @@
 			}
 		}
 		.monny{
+		
 			color: red;
 			text{
 				
@@ -83,5 +128,6 @@
 			}
 		}
 	}
+}
 }
 </style>

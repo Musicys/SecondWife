@@ -25,7 +25,8 @@
 /* 透明度 */
 /* 文章场景相关 */
 .wife.data-v-6f223ec9 {
-  width: 750rpx;
+  border-top: 1rpx solid black;
+  width: 100%;
   background: #85D8FF;
   display: flex;
   flex-direction: column;

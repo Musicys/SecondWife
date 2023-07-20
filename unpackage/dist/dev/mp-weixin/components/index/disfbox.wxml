@@ -1,0 +1,1 @@
+<view class="box data-v-17f51e6a"><block wx:for="{{flexdata}}" wx:for-item="i" wx:for-index="index" wx:key="index"><view class="ite data-v-17f51e6a"><image src="/static/sytwo/ce.png" mode="widthFix" class="data-v-17f51e6a"></image><text class="data-v-17f51e6a">黑猫游戏</text></view></block></view>

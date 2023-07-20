@@ -6,9 +6,8 @@
 			<text><strong>---</strong></text><view ><strong>{{tlile}}</strong></view> <text><strong>---</strong></text> 
 			</view>
 			<view class="but">
-				<Cartone></Cartone>
-				<Cartone></Cartone>
-			
+				
+				
 			</view>
 		</view>
 	</view>
@@ -18,6 +17,7 @@
 		background: #FFFFFF;
 		width: 100%;
 		margin-top:2rpx ;
+		border-top: 1px solid black;
 		.top{
 			padding: 10px 0px;
 			display: flex;
@@ -25,17 +25,15 @@
 			border-bottom: 1rpx solid rgba(0, 0, 0, .3);
 		}
 		.but{
-		display: flex;
-		flex-wrap: wrap;
+		
 		}
 		
 	}
 </style>
 <script>
-	import Cartone from '@/components/Cartone.vue' 
 	export default {
 		name:"Cart",
-		components:{Cartone},
+		components:{},
 		
 		props:{
 			// 

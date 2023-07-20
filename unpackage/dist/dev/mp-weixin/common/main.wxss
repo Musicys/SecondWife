@@ -14,4 +14,17 @@
 
 
 /*每个页面公共css */
+.f-color{
+	color: #49BDFB;
+	border-bottom:6rpx solid #49BDFB ;
+}
+::-webkit-scrollbar
+{
+	display: none;
+	
+	width: 0 !important;
+	height: 0 !important;
+	-webkit-appearance: none;
+	background: transparent;
+}
 

@@ -2,6 +2,11 @@
   "navigationBarTitleText": "月薪上万",
   "usingComponents": {
     "index-swiper": "/components/index/indexSwiper",
-    "wife": "/components/index/Wife"
+    "wife": "/components/index/Wife",
+    "cart": "/components/Cart",
+    "brch": "/components/index/Brch",
+    "dilboxk": "/components/index/disfbox",
+    "cartone": "/components/Cartone",
+    "shop": "/components/index/Shop"
   }
 }
